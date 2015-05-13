@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<idf>
+  <epsara-input>
+    <spectral-information>
+      <atomic-no-inc-ion>1</atomic-no-inc-ion>
+      <mass-no-inc-ion>1</mass-no-inc-ion>
+      <channel-min>0</channel-min>
+      <channel-max>511</channel-max>
+      <ion-energy>1400</ion-energy>
+      <calibration-energy-per-channel>18.1902</calibration-energy-per-channel>
+      <calibration-energy-per-channel-square>-0.000885982</calibration-energy-per-channel-square>																																											
+      <calibration-energy-offset>-16.0429</calibration-energy-offset>
+      <calibration-energy-per-channel-cube>0</calibration-energy-per-channel-cube>
+      <inc-angle-phi>0</inc-angle-phi>
+      <out-angle-phi>10</out-angle-phi>
+      <inc-angle-theta>0</inc-angle-theta>
+      <out-angle-theta>0</out-angle-theta>
+      <solid-angle>4.2</solid-angle>
+      <ion-fluence fittable="TRUE">3.45e+14</ion-fluence>
+      <region-of-interest roi-lower-channel="40" roi-upper-channel="60"/>
+      <region-of-interest roi-lower-channel="250" roi-upper-channel="415"/>
+      <solid-angle>4.2</solid-angle>
+      <!--<spectrum-to-fit>./90krand.dat</spectrum-to-fit>-->
+    </spectral-information>
+    <element>
+      <material-name>Oxygen</material-name>
+      <atomic-no-initial-target>8</atomic-no-initial-target>
+      <mass-no-initial-target>16</mass-no-initial-target>
+      <layer-begin>0</layer-begin>
+      <layer-end>100000</layer-end>
+      <atomic-density fittable="FALSE">4.58235597594238E+022</atomic-density>
+      <reaction react-type="RBS" /> -->
+      <reaction react-type="NRA">
+          <atomic-no-remain-target>8</atomic-no-remain-target>																																																	
+          <mass-no-remain-target>16</mass-no-remain-target>
+          <atomic-no-det-ion>1</atomic-no-det-ion>
+          <mass-no-det-ion>1</mass-no-det-ion>
+          <q-value>0</q-value>
+          <cross-section>./o6pp0a.r33</cross-section>
+        </reaction>
+    </element>
+    <element>
+      <material-name>Niobium</material-name>
+      <atomic-no-initial-target>41</atomic-no-initial-target>
+      <mass-no-initial-target>93</mass-no-initial-target>
+      <layer-begin>0</layer-begin>
+      <layer-end>100000</layer-end>
+      <atomic-density fittable="TRUE">2.27E+022</atomic-density>
+      <reaction react-type="RBS" />
+    </element>
+    <element>
+      <material-name>Lithium</material-name>
+      <atomic-no-initial-target>3</atomic-no-initial-target>
+      <mass-no-initial-target>7</mass-no-initial-target>
+      <layer-begin>0</layer-begin>
+      <layer-end>100000</layer-end>
+      <atomic-density fittable="TRUE">2.62659174841535E+022</atomic-density>
+      <reaction react-type="RBS" />
+      <reaction react-type="NRA">
+          <atomic-no-remain-target>2</atomic-no-remain-target>
+          <mass-no-remain-target>4</mass-no-remain-target>
+          <atomic-no-det-ion>2</atomic-no-det-ion>
+          <mass-no-det-ion>4</mass-no-det-ion>
+          <q-value>17347.28</q-value>
+          <cross-section>./sHaufLi.r33</cross-section>
+        </reaction>
+    </element>
+  </epsara-input>
+</idf>
+
