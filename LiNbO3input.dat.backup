@@ -16,18 +16,19 @@
       <inc-angle-theta>0</inc-angle-theta>
       <out-angle-theta>0</out-angle-theta>
       <solid-angle>4.2</solid-angle>
-      <ion-fluence fittable="TRUE">2347777777777777777</ion-fluence>
+      <ion-fluence fittable="TRUE">3.45e+14</ion-fluence>
       <region-of-interest roi-lower-channel="40" roi-upper-channel="60"/>
       <region-of-interest roi-lower-channel="250" roi-upper-channel="415"/>
       <solid-angle>4.2</solid-angle>
-      <spectrum-to-fit>./somewhere/nowhere.dat</spectrum-to-fit>-->
+      <!--<spectrum-to-fit>./90krand.dat</spectrum-to-fit>-->
+    </spectral-information>
     <element>
       <material-name>Oxygen</material-name>
       <atomic-no-initial-target>8</atomic-no-initial-target>
       <mass-no-initial-target>16</mass-no-initial-target>
       <layer-begin>0</layer-begin>
       <layer-end>100000</layer-end>
-      <atomic-density fittable="FALSE">234e34</atomic-density>
+      <atomic-density fittable="FALSE">4.58235597594238E+022</atomic-density>
       <reaction react-type="RBS" /> -->
       <reaction react-type="NRA">
           <atomic-no-remain-target>8</atomic-no-remain-target>																																																	
@@ -53,7 +54,8 @@
       <mass-no-initial-target>7</mass-no-initial-target>
       <layer-begin>0</layer-begin>
       <layer-end>100000</layer-end>
-      <atomic-density fittable="FALSE">2334556778</atomic-density>
+      <atomic-density fittable="TRUE">2.62659174841535E+022</atomic-density>
+      <reaction react-type="RBS" />
       <reaction react-type="NRA">
           <atomic-no-remain-target>2</atomic-no-remain-target>
           <mass-no-remain-target>4</mass-no-remain-target>

@@ -1,3 +1,4 @@
+#!/usr/bin/python2
 import re
 import sys
 if len(sys.argv)>=2:
@@ -33,11 +34,8 @@ for i in range(2,len(sys.argv)):
         s2f = sys.argv[i+1]
     if re.search("nofit", sys.argv[i]):
         nofit = 1       
- 
 
 for line in inputfile:
-    #if re.search(r"([0-9])?(\.)?([0-9].*)?e?\+?[0-9]",line):
-     #   print line
     if re.search("ion-energy", line):
         if ionenergy != "":
             line = "      <ion-energy>" + ionenergy + "</ion-energy>\n"
@@ -46,17 +44,15 @@ for line in inputfile:
             line = "      <ion-fluence fittable=\"TRUE\">" + fluency + "</ion-fluence>\n"
     elif re.search("<spectrum-to-fit>", line):
         if s2f:
-            line = "      <spectrum-to-fit>" + s2f + "</spectrum-to-fit>-->"
+            line = "      <spectrum-to-fit>" + s2f + "</spectrum-to-fit>-->\n"
         if nofit:
-            line = "      <!--<spectrum-to-fit>" + s2f + "</spectrum-to-fit>-->"
-            print "HIER BIN ICH"
+            line = "      <!--<spectrum-to-fit>" + s2f + "</spectrum-to-fit>-->\n"
     elif re.search("Oxygen",line):
         oxygen=1
     elif re.search("Lithium",line):
         lithium=1
     elif re.search("Niobium",line):
         nobium=1
-
     elif (oxygen == 1) & (oxygenden != ""):
         if re.search("atomic-density fittable", line):
             line = "      <atomic-density fittable=\"FALSE\">" + oxygenden + "</atomic-density>\n"
@@ -65,9 +61,10 @@ for line in inputfile:
         if re.search("atomic-density fittable", line):
             line = "      <atomic-density fittable=\"FALSE\">" + niobiumden + "</atomic-density>\n"
             niobium = 0
+            print("Niobden gesetzt")
     elif (lithium == 1) & (lithiumden != ""):
         if re.search("atomic-density fittable", line):
-            line = "      <atomic-density fittable=\"FALSE\">" + lithiumden + "</atomic-density>"
+            line = "      <atomic-density fittable=\"FALSE\">" + lithiumden + "</atomic-density>\n"
             lithium = 0
     
     inhalt.append(line)
